@@ -258,7 +258,7 @@ SignPreview.svelte 内の `$effect()` が `station.*` と `flags.*` の変更を
 ### Cloudflare Pages
 
 - **デプロイ方式**: GitHub Actions + `wrangler pages deploy`（Direct Upload）
-- **本番**: `odq-sign-generator.pages.dev`（main push）
+- **本番**: `odq-sign-gen.pages.dev`（main push）
 - **プレビュー**: PRごとに自動生成
 
 ### セキュリティヘッダー（_headers）
