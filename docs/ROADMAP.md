@@ -49,19 +49,19 @@
 - [x] canvas-utils.ts（HiDPI Canvas 設定 + toBlob 出力 + ダウンロード）
 - [x] fonts.ts（FontFace API ロード）
 - [x] ユニットテスト（Vitest）
-- [ ] VRT（Playwright）— Phase 4 で UI と合わせて実施
+- [x] VRT（Playwright）— Phase 4 で UI と合わせて実施
 
 ### Phase 4: Svelte コンポーネント + UI
 
-- [ ] 状態管理（state.svelte.ts）— [Issue #4](https://github.com/yoku8983/odq-sign-generator/issues/4)
-- [ ] コンポーネント実装
+- [x] 状態管理（state.svelte.ts）— [Issue #4](https://github.com/yoku8983/odq-sign-generator/issues/4)
+- [x] コンポーネント実装
   - Header, StationForm, PatternSelector, StationNameInputs
   - AdjacentInputs, NumberingInputs, ActionButtons
   - SignPreview, NotesSection, Footer
-- [ ] リアルタイムプレビュー（$effect による自動再描画）
-- [ ] 画像保存（toBlob + ダウンロード）/ Canvas クリア / フォームリセット
-- [ ] SNS シェア（intent URL: Twitter, LINE, Facebook）
-- [ ] E2E テスト（Playwright）
+- [x] リアルタイムプレビュー（$effect による自動再描画）
+- [x] 画像保存（toBlob + ダウンロード）/ Canvas クリア / フォームリセット
+- [x] SNS シェア（intent URL: Twitter, LINE, Facebook）
+- [x] E2E テスト（Playwright）
 
 ### Phase 5: 最適化 + リリース
 

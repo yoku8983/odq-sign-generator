@@ -15,6 +15,7 @@
     "test:e2e:update": "playwright test --update-snapshots"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@sveltejs/vite-plugin-svelte": "^7.1.2",
     "@tsconfig/svelte": "^5.0.8",
     "@types/node": "^24.13.2",
