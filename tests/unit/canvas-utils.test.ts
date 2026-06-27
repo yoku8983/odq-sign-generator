@@ -139,7 +139,7 @@ describe('shareImage', () => {
     expect(shareData.files[0].type).toBe('image/png');
     expect(shareData.title).toBe('小田急駅名標ジェネレーター');
     expect(shareData.text).toBe(
-      '自分だけの小田急の駅名標を作ってみた\u{1F683} https://odq-stasigin-gen.net',
+      '#小田急駅名標ジェネレーター\u{1F683} https://odq-stasigin-gen.net',
     );
     expect(shareData.url).toBe('https://odq-stasigin-gen.net');
   });

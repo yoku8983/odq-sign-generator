@@ -46,7 +46,7 @@ export async function shareImage(blob: Blob, filename = 'station-sign.png'): Pro
   await navigator.share({
     files: [file],
     title: '小田急駅名標ジェネレーター',
-    text: `自分だけの小田急の駅名標を作ってみた\u{1F683} ${SHARE_URL}`,
+    text: `#小田急駅名標ジェネレーター\u{1F683} ${SHARE_URL}`,
     url: SHARE_URL,
   });
 }
