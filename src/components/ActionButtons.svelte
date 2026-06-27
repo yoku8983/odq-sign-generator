@@ -5,7 +5,12 @@
   let saving = $state(false);
   let sharing = $state(false);
 
+  const isMobile =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(pointer: coarse)').matches;
+
   const canShareFiles =
+    isMobile &&
     typeof navigator !== 'undefined' &&
     typeof navigator.canShare === 'function' &&
     navigator.canShare({
