@@ -43,12 +43,13 @@
 
 ### Phase 3: Canvas 描画パイプライン
 
-- [ ] renderer.ts（描画オーケストレーター）— [Issue #3](https://github.com/yoku8983/odq-sign-generator/issues/3)
-- [ ] text.ts（二分探索フォントサイズ最適化 + テキスト描画）
-- [ ] shapes.ts（角丸矩形 + ナンバリング描画）
-- [ ] canvas-utils.ts（HiDPI Canvas 設定 + toBlob 出力 + ダウンロード）
-- [ ] fonts.ts（FontFace API ロード）
-- [ ] ユニットテスト + VRT（Playwright）
+- [x] renderer.ts（描画オーケストレーター）— [Issue #3](https://github.com/yoku8983/odq-sign-generator/issues/3)
+- [x] text.ts（二分探索フォントサイズ最適化 + テキスト描画）
+- [x] shapes.ts（角丸矩形 + ナンバリング描画）
+- [x] canvas-utils.ts（HiDPI Canvas 設定 + toBlob 出力 + ダウンロード）
+- [x] fonts.ts（FontFace API ロード）
+- [x] ユニットテスト（Vitest）
+- [ ] VRT（Playwright）— Phase 4 で UI と合わせて実施
 
 ### Phase 4: Svelte コンポーネント + UI
 

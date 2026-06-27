@@ -179,15 +179,15 @@ Canvas基準 1200x373px からの正規化座標。主要要素:
 
 設計仕様: [Issue #3](https://github.com/yoku8983/odq-sign-generator/issues/3)
 
-### モジュール構成（計~250行）
+### モジュール構成（計~390行）
 
-| ファイル | 責務 | 行数目安 |
-|---------|------|---------|
-| `renderer.ts` | 描画オーケストレーター | ~80行 |
-| `text.ts` | fitFontSize（二分探索）+ drawFittedText | ~60行 |
-| `shapes.ts` | drawRoundedRect + drawTwoLineTextInRect | ~50行 |
+| ファイル | 責務 | 行数 |
+|---------|------|------|
+| `renderer.ts` | 描画オーケストレーター + 内部ヘルパー3関数 | ~200行 |
+| `shapes.ts` | drawRoundedRect + drawNumberingBadge | ~70行 |
+| `text.ts` | fitFontSize（二分探索）+ drawFittedText | ~65行 |
 | `canvas-utils.ts` | HiDPI Canvas設定 + toBlob出力 + ダウンロード | ~40行 |
-| `fonts.ts` | FontFace APIロード | ~20行 |
+| `fonts.ts` | FontFace APIロード | ~16行 |
 
 ### 描画順序
 
