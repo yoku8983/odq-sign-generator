@@ -48,7 +48,7 @@ odq-sign-generator/
 │   ├── _redirects              # Cloudflare Pagesリダイレクト
 │   ├── favicon.ico
 │   ├── assets/                 # 背景画像・ロゴ
-│   └── fonts/                  # カスタムフォント（FrutigerBold, Mplus2c, VialogLT）
+│   └── fonts/                  # カスタムフォント woff2（FrutigerBold, Mplus2c, VialogLT）
 ├── src/
 │   ├── main.ts                 # Appマウント
 │   ├── App.svelte              # ルートコンポーネント
@@ -60,6 +60,9 @@ odq-sign-generator/
 │   ├── unit/                   # Vitestユニットテスト
 │   ├── e2e/                    # Playwright E2E
 │   └── visual/                 # Playwright VRT
+├── fonts-src/                  # 元TTFファイル（ビルド出力に含まれない）
+├── scripts/
+│   └── subset-fonts.py         # フォントサブセット化 + woff2変換
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── ROADMAP.md

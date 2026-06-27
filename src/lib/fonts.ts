@@ -1,7 +1,7 @@
 const FONT_DEFINITIONS = [
-  { name: 'Mplus2c', url: '/fonts/Mplus2c-Medium.ttf' },
-  { name: 'VialogLT', url: '/fonts/VialogLT-Regular.ttf' },
-  { name: 'FrutigerBold', url: '/fonts/Frutiger-Bold.ttf' },
+  { name: 'Mplus2c', url: '/fonts/Mplus2c-Medium.woff2' },
+  { name: 'VialogLT', url: '/fonts/VialogLT-Regular.woff2' },
+  { name: 'FrutigerBold', url: '/fonts/Frutiger-Bold.woff2' },
 ] as const;
 
 export async function loadFonts(): Promise<void> {
