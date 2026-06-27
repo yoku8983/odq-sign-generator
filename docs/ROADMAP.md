@@ -34,12 +34,12 @@
 
 ### Phase 2: データモデル + レイアウトエンジン
 
-- [ ] TypeScript 型定義 — [Issue #1](https://github.com/yoku8983/odq-sign-generator/issues/1)
+- [x] TypeScript 型定義 — [Issue #1](https://github.com/yoku8983/odq-sign-generator/issues/1)
   - StationData, StationNumbering, DisplayFlags, StationPatternEntry, RenderOptions
-- [ ] LAYOUT 定数 + LayoutResolver — [Issue #2](https://github.com/yoku8983/odq-sign-generator/issues/2)
+- [x] LAYOUT 定数 + LayoutResolver — [Issue #2](https://github.com/yoku8983/odq-sign-generator/issues/2)
   - 正規化座標（0〜1）定義、LayoutResolver クラス
-- [ ] 駅名パターンデータ移植（station-patterns.ts、70駅）
-- [ ] ユニットテスト（Vitest）
+- [x] 駅名パターンデータ移植（station-patterns.ts、70駅）
+- [x] ユニットテスト（Vitest）
 
 ### Phase 3: Canvas 描画パイプライン
 
