@@ -41,6 +41,7 @@ odq-sign-generator/
 ├── vite.config.ts
 ├── tsconfig.json
 ├── svelte.config.js
+├── playwright.config.ts        # Playwright E2E/VRT設定
 ├── package.json
 ├── public/
 │   ├── _headers                # Cloudflare Pagesセキュリティ・キャッシュヘッダー
@@ -51,9 +52,10 @@ odq-sign-generator/
 ├── src/
 │   ├── main.ts                 # Appマウント
 │   ├── App.svelte              # ルートコンポーネント
-│   ├── app.css                 # グローバルCSS（CSS変数、ベース）
-│   ├── components/             # Svelteコンポーネント
+│   ├── app.css                 # グローバルCSS（CSS変数、フォーム、ボタン、レスポンシブ）
+│   ├── components/             # Svelteコンポーネント（10ファイル）
 │   └── lib/                    # ロジック層（型定義・描画・状態管理）
+│       └── state.svelte.ts     # リアクティブ状態管理（$state / Runes）
 ├── tests/
 │   ├── unit/                   # Vitestユニットテスト
 │   ├── e2e/                    # Playwright E2E

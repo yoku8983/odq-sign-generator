@@ -33,3 +33,98 @@ body {
   text-align: center;
   margin: 0 0 16px 0;
 }
+
+/* --- Form elements --- */
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type='text'],
+select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+input[type='text']:focus,
+select:focus {
+  outline: none;
+  border-color: var(--odakyu-blue);
+  box-shadow: 0 0 0 2px rgba(2, 140, 212, 0.15);
+}
+
+/* --- Buttons --- */
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--odakyu-blue);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--odakyu-dark-blue);
+}
+
+.btn-secondary {
+  background-color: var(--light-gray);
+  color: #333;
+  border: 1px solid var(--border-gray);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #e8e8e8;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .site-title {
+    font-size: 1.5em;
+  }
+}
