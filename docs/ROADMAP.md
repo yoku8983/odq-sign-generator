@@ -24,13 +24,13 @@
 
 ### Phase 1: プロジェクト初期化（Vite + Svelte 5）
 
-- [ ] Vite + Svelte 5 + TypeScript（strict mode）セットアップ
-- [ ] npm scripts 定義（dev, build, preview, check, test, test:e2e 等）
-- [ ] index.html（OGP meta tags、日本語 lang 属性）
-- [ ] src/App.svelte（最小プレースホルダー）
-- [ ] src/app.css（CSS変数: 小田急ブランドカラー + ベーススタイル）
-- [ ] Cloudflare Pages 設定（_headers, _redirects）
-- [ ] GitHub Actions CI/CD ワークフロー（ci.yml, deploy.yml）
+- [x] Vite + Svelte 5 + TypeScript（strict mode）セットアップ
+- [x] npm scripts 定義（dev, build, preview, check, test, test:e2e 等）
+- [x] index.html（OGP meta tags、日本語 lang 属性）
+- [x] src/App.svelte（最小プレースホルダー）
+- [x] src/app.css（CSS変数: 小田急ブランドカラー + ベーススタイル）
+- [x] Cloudflare Pages 設定（_headers, _redirects）
+- [x] GitHub Actions CI/CD ワークフロー（ci.yml, deploy.yml）
 
 ### Phase 2: データモデル + レイアウトエンジン
 
@@ -67,7 +67,7 @@
 
 - [x] フォント最適化（TTF→woff2変換 + Mplus2cサブセット化、合計1.43MB→498KB）
 - [x] バンドルサイズ最適化（フォント/画像preload、build target es2023、modulePreload polyfill除去、console/debugger除去、バンドル分析ツール導入。JS 78.2KB→77.2KB gzip 25.5KB→25.1KB）
-- [ ] Cloudflare Pages 本番デプロイ
+- [x] Cloudflare Pages 本番デプロイ
 - [ ] カスタムドメイン設定（旧 Azure SWA からの移行）
 - [ ] パフォーマンス検証
 
