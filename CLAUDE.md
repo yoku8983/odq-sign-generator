@@ -95,6 +95,7 @@ odq-sign-generator/
 ## ドキュメント更新ルール
 
 - 機能追加・設計変更時は ARCHITECTURE.md / ROADMAP.md を同じPR内で更新する
+- セキュリティに関する変更時は SECURITY.md を同じPR内で更新する
 - CLAUDE.md の記述が実態と乖離していたら修正する
 - 重要な技術・設計判断は `docs/adr/` にADRとして記録する
 
