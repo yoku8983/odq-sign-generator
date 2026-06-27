@@ -1,5 +1,5 @@
 <script lang="ts">
-  const PAGE_URL = 'https://odq-sign-generator.pages.dev';
+  const PAGE_URL = 'https://odq-stasigin-gen.net';
   const SHARE_TEXT = '小田急駅名標ジェネレーター';
 
   const shareLinks = [

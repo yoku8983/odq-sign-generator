@@ -31,7 +31,7 @@ npm run check        # Svelte型チェック
 - **言語**: TypeScript
 - **テスト**: Vitest（ユニット）+ Playwright（E2E / VRT）
 - **ホスティング**: Cloudflare Pages（Direct Upload、GitHub Actions経由）
-- **公開URL**: `odq-sign-gen.pages.dev`（Cloudflare Pagesデフォルト）
+- **公開URL**: `odq-stasigin-gen.net`（カスタムドメイン）/ `odq-sign-generator.pages.dev`（Cloudflare Pagesデフォルト）
 
 ## ディレクトリ構成
 

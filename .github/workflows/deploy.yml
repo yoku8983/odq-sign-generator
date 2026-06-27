@@ -29,5 +29,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: >-
             pages deploy dist
-            --project-name=odq-sign-gen
+            --project-name=odq-sign-generator
             ${{ github.event_name == 'pull_request' && format('--branch={0}', github.head_ref) || '' }}
