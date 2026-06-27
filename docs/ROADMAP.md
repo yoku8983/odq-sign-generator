@@ -66,7 +66,7 @@
 ### Phase 5: 最適化 + リリース
 
 - [x] フォント最適化（TTF→woff2変換 + Mplus2cサブセット化、合計1.43MB→498KB）
-- [ ] バンドルサイズ最適化（その他）
+- [x] バンドルサイズ最適化（フォント/画像preload、build target es2023、modulePreload polyfill除去、console/debugger除去、バンドル分析ツール導入。JS 78.2KB→77.2KB gzip 25.5KB→25.1KB）
 - [ ] Cloudflare Pages 本番デプロイ
 - [ ] カスタムドメイン設定（旧 Azure SWA からの移行）
 - [ ] パフォーマンス検証
