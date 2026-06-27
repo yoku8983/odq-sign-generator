@@ -69,7 +69,7 @@
 - [x] バンドルサイズ最適化（フォント/画像preload、build target es2023、modulePreload polyfill除去、console/debugger除去、バンドル分析ツール導入。JS 78.2KB→77.2KB gzip 25.5KB→25.1KB）
 - [x] Cloudflare Pages 本番デプロイ
 - [x] カスタムドメイン設定（odq-stasigin-gen.net、旧 Azure SWA からの移行）
-- [ ] パフォーマンス検証
+- [x] パフォーマンス検証（[docs/PERFORMANCE.md](PERFORMANCE.md) に結果を記録）
 
 ---
 
