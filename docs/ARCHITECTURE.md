@@ -41,7 +41,7 @@ odq-sign-generator/
 │   ├── favicon.ico
 │   ├── robots.txt
 │   ├── assets/                 # background.png, badgelogo.png
-│   └── fonts/                  # Mplus2c-Medium.ttf, VialogLT-Regular.ttf, Frutiger-Bold.ttf
+│   └── fonts/                  # Mplus2c-Medium.woff2, VialogLT-Regular.woff2, Frutiger-Bold.woff2
 ├── src/
 │   ├── main.ts                 # App マウント
 │   ├── App.svelte              # ルートコンポーネント
@@ -72,6 +72,12 @@ odq-sign-generator/
 │   ├── unit/                   # Vitest ユニットテスト
 │   ├── e2e/                    # Playwright E2E
 │   └── visual/                 # Playwright VRT
+├── fonts-src/                  # 元TTFファイル（ビルド出力に含まれない）
+│   ├── Mplus2c-Medium.ttf
+│   ├── Frutiger-Bold.ttf
+│   └── VialogLT-Regular.ttf
+├── scripts/
+│   └── subset-fonts.py         # フォントサブセット化 + woff2変換
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── ROADMAP.md
