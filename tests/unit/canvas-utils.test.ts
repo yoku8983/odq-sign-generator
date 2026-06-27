@@ -1,5 +1,10 @@
 import { describe, it, expect, vi } from 'vitest';
-import { setupHiDPICanvas, canvasToBlob, downloadBlob } from '$lib/canvas-utils';
+import {
+  setupHiDPICanvas,
+  canvasToBlob,
+  downloadBlob,
+  shareImage,
+} from '$lib/canvas-utils';
 import { LayoutResolver } from '$lib/layout-resolver';
 
 function createMockCanvas() {
@@ -115,5 +120,43 @@ describe('downloadBlob', () => {
 
     downloadBlob(new Blob(['test']));
     expect(mockLink.download).toBe('station-sign.png');
+  });
+});
+
+describe('shareImage', () => {
+  it('should call navigator.share with a File', async () => {
+    const shareSpy = vi.fn().mockResolvedValue(undefined);
+    vi.stubGlobal('navigator', { share: shareSpy });
+
+    const blob = new Blob(['test'], { type: 'image/png' });
+    await shareImage(blob, 'my-sign.png');
+
+    expect(shareSpy).toHaveBeenCalledOnce();
+    const shareData = shareSpy.mock.calls[0][0];
+    expect(shareData.files).toHaveLength(1);
+    expect(shareData.files[0]).toBeInstanceOf(File);
+    expect(shareData.files[0].name).toBe('my-sign.png');
+    expect(shareData.files[0].type).toBe('image/png');
+    expect(shareData.title).toBe('小田急駅名標ジェネレーター');
+    expect(shareData.text).toBe('小田急駅名標ジェネレーターで作成しました');
+  });
+
+  it('should use default filename', async () => {
+    const shareSpy = vi.fn().mockResolvedValue(undefined);
+    vi.stubGlobal('navigator', { share: shareSpy });
+
+    await shareImage(new Blob(['test']));
+
+    const shareData = shareSpy.mock.calls[0][0];
+    expect(shareData.files[0].name).toBe('station-sign.png');
+  });
+
+  it('should propagate errors from navigator.share', async () => {
+    const shareSpy = vi
+      .fn()
+      .mockRejectedValue(new DOMException('Canceled', 'AbortError'));
+    vi.stubGlobal('navigator', { share: shareSpy });
+
+    await expect(shareImage(new Blob(['test']))).rejects.toThrow('Canceled');
   });
 });

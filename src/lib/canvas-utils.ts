@@ -38,3 +38,12 @@ export function downloadBlob(blob: Blob, filename = 'station-sign.png'): void {
   a.click();
   URL.revokeObjectURL(url);
 }
+
+export async function shareImage(blob: Blob, filename = 'station-sign.png'): Promise<void> {
+  const file = new File([blob], filename, { type: 'image/png' });
+  await navigator.share({
+    files: [file],
+    title: '小田急駅名標ジェネレーター',
+    text: '小田急駅名標ジェネレーターで作成しました',
+  });
+}

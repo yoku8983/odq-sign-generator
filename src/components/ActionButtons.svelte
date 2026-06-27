@@ -1,8 +1,16 @@
 <script lang="ts">
   import { resetStation, getCanvasRef } from '$lib/state.svelte';
-  import { canvasToBlob, downloadBlob } from '$lib/canvas-utils';
+  import { canvasToBlob, downloadBlob, shareImage } from '$lib/canvas-utils';
 
   let saving = $state(false);
+  let sharing = $state(false);
+
+  const canShareFiles =
+    typeof navigator !== 'undefined' &&
+    typeof navigator.canShare === 'function' &&
+    navigator.canShare({
+      files: [new File([], 'test.png', { type: 'image/png' })],
+    });
 
   async function handleSave() {
     const canvas = getCanvasRef();
@@ -15,6 +23,21 @@
       alert('画像の保存に失敗しました');
     } finally {
       saving = false;
+    }
+  }
+
+  async function handleShare() {
+    const canvas = getCanvasRef();
+    if (!canvas || sharing) return;
+    sharing = true;
+    try {
+      const blob = await canvasToBlob(canvas);
+      await shareImage(blob);
+    } catch (e) {
+      if (e instanceof Error && e.name === 'AbortError') return;
+      alert('画像のシェアに失敗しました');
+    } finally {
+      sharing = false;
     }
   }
 
@@ -42,6 +65,17 @@
   >
     {saving ? '保存中...' : '画像を保存'}
   </button>
+  {#if canShareFiles}
+    <button
+      type="button"
+      class="btn-primary"
+      data-testid="share-button"
+      disabled={sharing}
+      onclick={handleShare}
+    >
+      {sharing ? 'シェア中...' : '画像をシェア'}
+    </button>
+  {/if}
   <button
     type="button"
     class="btn-secondary"
