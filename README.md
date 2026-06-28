@@ -2,7 +2,7 @@
 
 小田急電鉄風の駅名標画像をブラウザ上で生成する静的Webアプリ。
 
-https://odq-stasigin-gen.net
+https://odq-sign-generator.pages.dev
 
 旧リポジトリ [ODQ-ekimei-create](https://github.com/yoku8983/ODQ-ekimei-create) のゼロベースリライト（Svelte 5 + Canvas 2D API）。
 
@@ -64,6 +64,21 @@ npm run check    # Svelte型チェック（svelte-check）
 ## デプロイ
 
 mainブランチへのpushで Cloudflare Pages に自動デプロイ。PRごとにプレビュー環境が自動作成される。
+
+### ドメイン移行の経緯
+
+| 時期 | 環境 | 備考 |
+|------|------|------|
+| v1.x | Azure Static Web Apps + お名前.com カスタムドメイン (`odq-stasigin-gen.net`) | 旧リポジトリ [ODQ-ekimei-create](https://github.com/yoku8983/ODQ-ekimei-create) |
+| v2.0 | Cloudflare Pages (`odq-sign-generator.pages.dev`) | 本リポジトリ。GitHub Actions + Direct Upload |
+
+v2.0 への移行に伴い、以下を実施済み:
+
+1. Cloudflare Pages への移行・デプロイ
+2. 旧ドメイン `odq-stasigin-gen.net` から Cloudflare Pages へのリダイレクト設定
+3. Azure Static Web Apps / Azure DNS の廃止
+
+旧ドメインは有料（お名前.com）のため、Google 検索結果の移行が完了次第、廃止予定（[#23](https://github.com/yoku8983/odq-sign-generator/issues/23)）。
 
 ### 必要なGitHub設定
 
