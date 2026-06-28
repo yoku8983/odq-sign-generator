@@ -78,7 +78,7 @@ gzip転送を考慮した初回ロード内訳:
 PSI API のクォータ制限により自動測定不可。以下の手順で手動測定を推奨:
 
 1. [PageSpeed Insights](https://pagespeed.web.dev/) にアクセス
-2. URL `https://odq-stasigin-gen.net` を入力して分析
+2. URL `https://odq-sign-generator.pages.dev` を入力して分析
 3. デスクトップ / モバイル両方のスコアを確認
 
 ### 期待されるスコア

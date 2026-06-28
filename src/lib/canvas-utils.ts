@@ -39,7 +39,7 @@ export function downloadBlob(blob: Blob, filename = 'station-sign.png'): void {
   URL.revokeObjectURL(url);
 }
 
-const SHARE_URL = 'https://odq-stasigin-gen.net';
+const SHARE_URL = 'https://odq-sign-generator.pages.dev';
 
 export async function shareImage(blob: Blob, filename = 'station-sign.png'): Promise<void> {
   const file = new File([blob], filename, { type: 'image/png' });
